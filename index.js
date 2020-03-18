@@ -34,7 +34,7 @@ app.get('/', function (req,res) {
 
 app.use(artistRoutes);
 
-app.listen(4000, () => console.log('Server ready @ port 4000'))
+app.listen((process.env.PORT || 3000));
 
 
 
