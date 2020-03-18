@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pageTitle }}</title>
+    <link href='/css/main.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+            <form id="logoutform" action="/logout" method="POST">
+            <button id="logout" class="btn">Logout</button>
+            </form>
+    </header>
+    <div class="TopBar">
+      <div class="Title">
+        <h2>Artist Directory</h2>
+      </div>
+      <div class="Row">
+      <input class="search" type="text" id="search">
+      <button id="AddArtistBut" onclick="show()">Add Artist</button>
+      <button id="SearchBut">Search</button>
+      </div>
+  </div>
+  <div id="form">
+  <form id="customFields" action="/artists/add" method="POST">
+        <input id="Inputs" type="text" name="Name" placeholder="Artist Name" maxlength="40" required>
+        <input id="Inputs" type="text" name="About" placeholder="About Artist" maxlength="40" required>
+        <input id="Inputs" type="text" name="URL" placeholder="Image url" required>
+        <button id="AddBut">Add</button>
+  </form>
+  </div>
+  <div class="Artists">
+    <ul id = "list"></ul>
+   {{{ body }}}
+    </div>
+
+</div>
+ 
+</body>
+<script type="text/javascript" src="/js/javascript.js"></script>
+</html>

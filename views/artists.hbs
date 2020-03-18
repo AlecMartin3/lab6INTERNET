@@ -1,0 +1,14 @@
+{{#each artist}}
+        <div id="person">
+        <a href="/artist/{{this.id}}">
+                <img src='{{this.imageURL}}'  onError="noValidImg(this)"/>
+                <div class="info">
+                    <p class="name"><b>{{this.name}}</b></p>
+                    <p>{{this.about}}</p>
+                </div>
+                     <form>
+                        <button class="del" formaction="/artists/delete/{{this.id}}">Delete</button>
+                    </form>
+        </a>
+        </div>
+{{/each}}
